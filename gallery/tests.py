@@ -25,49 +25,49 @@ class locationTest(TestCase):
         locale = Location.objects.all()
         self.assertTrue(len(locale)==0)
 
-#     def test_update_location(self):
-#         self.new_location.save()
-#         self.update_location = Location.objects.filter(location='nairobi').update(location = 'tunza')
-#         self.updated_location = Location.objects.get(location='tunza')
-#         self.assertTrue(self.updated_location.location,'tunza')
+    def test_update_location(self):
+        self.new_location.save()
+        self.update_location = Location.objects.filter(location='nairobi').update(location = 'tunza')
+        self.updated_location = Location.objects.get(location='tunza')
+        self.assertTrue(self.updated_location.location,'tunza')
 
-#     def test_get_location_by_id(self):
-#         self.new_location.save()
-#         locale = Location.objects.get(id=1)
-#         self.assertTrue(locale.location,'nairobi')
+    def test_get_location_by_id(self):
+        self.new_location.save()
+        locale = Location.objects.get(id=1)
+        self.assertTrue(locale.location,'nairobi')
 
 
-# class CategoryTest(TestCase):
-#     def setUp(self):
-#         self.new_category = Category(name="test")
+class CategoryTest(TestCase):
+    def setUp(self):
+        self.new_category = Category(name="test")
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.new_category,Category))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_category,Category))
 
-#     def test_data(self):
-#         self.assertTrue(self.new_category.name,"test")
+    def test_data(self):
+        self.assertTrue(self.new_category.name,"test")
         
-#     def test_save(self):
-#         self.new_category.save()
-#         categories = Category.objects.all()
-#         self.assertTrue(len(categories)>0)
+    def test_save(self):
+        self.new_category.save()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories)>0)
     
-#     def test_delete(self):
-#         category = Category.objects.filter(id=1)
-#         category.delete()
-#         cat = Category.objects.all()
-#         self.assertTrue(len(cat)==0)
+    def test_delete(self):
+        category = Category.objects.filter(id=1)
+        category.delete()
+        cat = Category.objects.all()
+        self.assertTrue(len(cat)==0)
     
-#     def test_update_category(self):
-#         self.new_category.save()
-#         self.update_cat = Category.objects.filter(name='test').update(name = 'tunza')
-#         self.updated_cat = Category.objects.get(name='tunza')
-#         self.assertTrue(self.updated_cat.name,'tunza')
+    def test_update_category(self):
+        self.new_category.save()
+        self.update_cat = Category.objects.filter(name='test').update(name = 'tunza')
+        self.updated_cat = Category.objects.get(name='tunza')
+        self.assertTrue(self.updated_cat.name,'tunza')
 
-#     def test_get_category_by_id(self):
-#         self.new_category.save()
-#         cat = Category.objects.get(id=1)
-#         self.assertTrue(cat.name,'test')
+    def test_get_category_by_id(self):
+        self.new_category.save()
+        cat = Category.objects.get(id=1)
+        self.assertTrue(cat.name,'test')
 
 
 # class postsTest(TestCase):

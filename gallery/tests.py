@@ -70,41 +70,41 @@ class CategoryTest(TestCase):
         self.assertTrue(cat.name,'test')
 
 
-# class postsTest(TestCase):
-#     def setUp(self):
-#         self.new_location = Location(location="nairobi")
-#         # self.new_category = Category(name="test")
-#         self.new_location.save()
-#         # self.new_category.save()
-#         self.new_post = Posts(name="sheila",description="like eating",location=self.new_location)
+class postsTest(TestCase):
+    def setUp(self):
+        self.new_location = Location(location="nairobi")
+        # self.new_category = Category(name="test")
+        self.new_location.save()
+        # self.new_category.save()
+        self.new_post = Posts(name="sheila",description="like eating",location=self.new_location)
     
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.new_post,Posts))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_post,Posts))
     
-#     def test_data(self):
-#         self.assertTrue(self.new_post.name,"sheila")
-#         self.assertTrue(self.new_post.description,"like eating")
+    def test_data(self):
+        self.assertTrue(self.new_post.name,"sheila")
+        self.assertTrue(self.new_post.description,"like eating")
     
-#     def test_save(self):
-#         self.new_post.save()
-#         posts = Posts.objects.all()
-#         self.assertTrue(len(posts)>0)
+    def test_save(self):
+        self.new_post.save()
+        posts = Posts.objects.all()
+        self.assertTrue(len(posts)>0)
     
-#     def test_delete(self):
-#         post = Posts.objects.filter(id=1)
-#         post.delete()
-#         posts = Posts.objects.all()
-#         self.assertTrue(len(posts)==0)
+    def test_delete(self):
+        post = Posts.objects.filter(id=1)
+        post.delete()
+        posts = Posts.objects.all()
+        self.assertTrue(len(posts)==0)
 
-#     def test_update_post(self):
-#         self.new_post.save()
-#         self.update_post = Posts.objects.filter(name='sheila').update(name = 'picha')
-#         self.updated_post = Posts.objects.get(name='picha')
-#         self.assertTrue(self.updated_post.name,'picha')
+    def test_update_post(self):
+        self.new_post.save()
+        self.update_post = Posts.objects.filter(name='sheila').update(name = 'picha')
+        self.updated_post = Posts.objects.get(name='picha')
+        self.assertTrue(self.updated_post.name,'picha')
 
 
     
-#     def test_get_post_by_id(self):
-#         self.new_post.save()
-#         posts = Posts.objects.get(id=1)
-#         self.assertTrue(posts.name,'sheila')
+    def test_get_post_by_id(self):
+        self.new_post.save()
+        posts = Posts.objects.get(id=1)
+        self.assertTrue(posts.name,'sheila')

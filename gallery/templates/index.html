@@ -1,0 +1,43 @@
+<!-- {% extends 'base.html' %}
+{% block content %}
+
+
+
+
+<div class="row">
+    {% for post in posts %}
+
+    <div class="col-md-5">
+        <div>
+            <div>
+                <h3>{{post.name}} </h3>
+
+                <div >
+                    <div>
+                        <a href='/pic/{{post.id}}/' id='dk'>
+                            <img src="{{post.article_image.url}}" alt="Card image"></a>
+                    </div>
+                </div>
+
+                <div>
+                    {% for pos in post.category.all %}
+                    <b><em>Category:</em></b>{{pos}}
+                    <br>
+                    {% endfor %}
+                    Location:<a href="location/{{post.location_id}}">{{post.location}}</a>
+
+                </div>
+                {% if current_user.is_authenticated %}
+                <button><a href="">Delete</a></button>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+    <hr>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %} -->

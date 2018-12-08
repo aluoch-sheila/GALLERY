@@ -15,14 +15,14 @@ def locations(request,location_id):
 
 
 
-# def search_results(request):
+def search_results(request):
     
-#     if 'image' in request.GET or request.GET['image']:
-#         search_item = request.GET.get('image')
-#         searched_images = Posts.search_by_category(search_item)
-#         print(searched_images)
-#         message = f"{search_item}"
-#         return render(request, 'search.html',{"message":message,"posts": searched_images})
-#     else:
-#         message = "You haven't searched for any term"
-#         return render(request, 'search.html',{"message":message})
+    if 'image' in request.GET or request.GET['image']:
+        search_item = request.GET.get('image')
+        searched_images = Posts.search_by_category(search_item)
+        print(searched_images)
+        message = f"{search_item}"
+        return render(request, 'search.html',{"message":message,"posts": searched_images})
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'search.html',{"message":message})

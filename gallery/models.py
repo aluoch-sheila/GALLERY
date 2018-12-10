@@ -11,7 +11,7 @@ class Location(models.Model):
    
 
 class Category(models.Model):
-    name = models.CharField(max_length=10)
+    name = models.CharField(max_length=50)
 
     
     def __str__(self):

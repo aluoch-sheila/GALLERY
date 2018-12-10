@@ -3,13 +3,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
+<head>      
 
     {% if title %}
-    <title>MY_GALLERY - {{title}}</title>
+    <title>MY GALLERY - {{title}}</title>
     {% else %}
-    <title> MY_GALLERY </title>
+    <title> MY GALLERY </title>
     {% endif %}
 
     {% block styles %}
@@ -17,7 +16,7 @@
     {% bootstrap_css %}
 
 
-    <link rel="stylesheet" href="{% static 'css/gall.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
 
     {% endblock %}
 
@@ -28,7 +27,7 @@
     <div class='container'>
 
         {% block content %} {%endblock%}
-        {{news.title}}
+        {{gallery.title}}
         {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         {% bootstrap_javascript %}

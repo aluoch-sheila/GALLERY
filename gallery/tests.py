@@ -27,9 +27,9 @@ class locationTest(TestCase):
 
     def test_update_location(self):
         self.new_location.save()
-        self.update_location = Location.objects.filter(location='nairobi').update(location = 'tunza')
-        self.updated_location = Location.objects.get(location='tunza')
-        self.assertTrue(self.updated_location.location,'tunza')
+        self.update_location = Location.objects.filter(location='nairobi').update(location = 'outfits')
+        self.updated_location = Location.objects.get(location='outfits')
+        self.assertTrue(self.updated_location.location,'outfits')
 
     def test_get_location_by_id(self):
         self.new_location.save()
@@ -60,9 +60,9 @@ class CategoryTest(TestCase):
     
     def test_update_category(self):
         self.new_category.save()
-        self.update_cat = Category.objects.filter(name='test').update(name = 'tunza')
-        self.updated_cat = Category.objects.get(name='tunza')
-        self.assertTrue(self.updated_cat.name,'tunza')
+        self.update_cat = Category.objects.filter(name='test').update(name = 'outfits')
+        self.updated_cat = Category.objects.get(name='outfits')
+        self.assertTrue(self.updated_cat.name,'outfits')
 
     def test_get_category_by_id(self):
         self.new_category.save()
@@ -98,9 +98,9 @@ class postsTest(TestCase):
 
     def test_update_post(self):
         self.new_post.save()
-        self.update_post = Posts.objects.filter(name='sheila').update(name = 'picha')
-        self.updated_post = Posts.objects.get(name='picha')
-        self.assertTrue(self.updated_post.name,'picha')
+        self.update_post = Posts.objects.filter(name='sheila').update(name = 'cake')
+        self.updated_post = Posts.objects.get(name='cake')
+        self.assertTrue(self.updated_post.name,'cake')
 
 
     

@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-
 <div class="container">
     <div>
         {% for post in posts %}
@@ -24,8 +22,6 @@
                         <b><em>Category:</em></b>{{pos}}
                         <br>
                         {% endfor %}
-
-
                     </div>
                     {% if current_user.is_authenticated %}
                     <button><a href="">Delete</a></button>
@@ -34,11 +30,7 @@
 
             </div>
         </div>
-
         <hr>
-
-
-
         {% endfor %}
     </div>
 </div>

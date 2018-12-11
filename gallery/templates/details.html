@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<em>
+    <H1>Click on the image to display details</H1>
+</em>
+{% for post in posts %}
+
+<a data-toggle="modal" data-target="#myModal{{post.id}}"><img src="{{post.article_image.url}}"
+        width="900" height="500" alt="aaa"></a>
+
+{% endfor %}
+{% for post in posts %}
+<!-- Modal -->
+<div class="modal fade" id="myModal{{post.id}}" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Copy image</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <div class="modal-body">
+                <p>
+                    <h1>name:{{post.name}}</h1>
+                </p>
+                <img src="{{post.article_image.url}}" width="300" height="300">
+            </div>
+            <b><em>Description:</em></b>{{post.description}}
+            {% for pos in post.category.all %}
+            <b><em>Category:</em></b>{{pos}}
+            {% endfor %}
+            <form class="form-control">
+                <input type="text" class="form-control" id="url" value='{{post.article_image.url}}'>
+                <button class="btn btn-succrss" onclick='copy()'>COPY IMAGE LINK</button>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">EXIT</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+{% endfor %}
+{% endblock %}

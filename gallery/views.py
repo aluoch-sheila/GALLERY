@@ -7,7 +7,7 @@ def index(request):
 
 def full_pic(request,pic_id):
     posts = Posts.objects.filter(id=pic_id)
-    return render(request,'one.html',{'posts':posts})
+    return render(request,'details.html',{'posts':posts})
 
 def locations(request,location_id):
     posts = Posts.objects.filter(location_id=location_id)

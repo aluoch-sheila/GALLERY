@@ -2,22 +2,24 @@
 {% block content %}
 
 <div class="container">
-    <div>
+    <div class="row">
+
         {% for post in posts %}
 
-        <div>
-            <div>
-                <div >
-                    <h3>{{post.name}} </h3>
+        <div class="col-md-5">
+            <div style="display: inline-block; ">
+                <div class="card ml-4" style=" width: 500px; text-align: center">
 
-                    <div >
-                        <div>
+            <h3 class="card-header" style="background-color: black; color: white;">{{post.name}} </h3>
+
+                    <div class="card-body">
+                        <div class="thumbnail">
                             <a href='/pic/{{post.id}}/' id='dk'>
-                                <img src="{{post.article_image.url}}" alt="Card image"></a>
+                                <img style="height: 300px; width: 100%; display: block;" src="{{post.article_image.url}}" alt="Card image"></a>
                         </div>
                     </div>
 
-                    <div >
+                    <div class="card-footer text-muted">
                         {% for pos in post.category.all %}
                         <b><em>Category:</em></b>{{pos}}
                         <br>

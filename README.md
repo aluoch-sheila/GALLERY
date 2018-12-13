@@ -45,7 +45,7 @@
    python manage.py migrate
    python manage.py runserver
  
- ##Django admin
+ ## Django admin
   Username: Sheila
   Password: lastborn20
   

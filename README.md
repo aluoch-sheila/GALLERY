@@ -45,7 +45,10 @@
    python manage.py migrate
    python manage.py runserver
  
- 
+ ##Django admin
+  Username: Sheila
+  Password: lastborn20
+  
  ## Technologies Used
  * python3:Django
  * Flask :Jinja

@@ -1,2 +1,3 @@
-start.sh
 .env
+virtual
+__pycache__
